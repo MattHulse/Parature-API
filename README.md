@@ -9,32 +9,31 @@ rake install
 
 ## Getting Started ##
 You will need your Parature URL, Dev Token, AccountID, and DeptID
-'''
-require 'parature'
 
-BASEURL = "https://sn.parature.com"
-TOKEN = "abcdefg1234567890hijklmnopqrstuvwxyz0987654321"
-ACCOUNTID = 11223
-DEPTID = 33221
+    require 'parature'
 
-p = Parature::Parature.new(BASEURL, TOKEN, ACCOUNTID, DEPTID)
+    BASEURL = "https://sn.parature.com"
+    TOKEN = "abcdefg1234567890hijklmnopqrstuvwxyz0987654321"
+    ACCOUNTID = 11223
+    DEPTID = 33221
 
-accounts = p.get_accounts
+    p = Parature::Parature.new(BASEURL, TOKEN, ACCOUNTID, DEPTID)
 
-puts accounts.length
-puts accounts.first.Account_Name.text
-puts accounts.last.Account_Name.text
+    accounts = p.get_accounts
 
-my_company = accounts.find {|node| node.Account_Name.text =~ /^My Company Name$/ and node['service-desk-uri'] }
-puts my_company
-id = my_company[:id]
+    puts accounts.length
+    puts accounts.first.Account_Name.text
+    puts accounts.last.Account_Name.text
 
-id = 1
-account = p.find_account_by_id(id)
-puts account
+    my_company = accounts.find {|node| node.Account_Name.text =~ /^My Company Name$/ and node['service-desk-uri'] }
+    puts my_company
+    id = my_company[:id]
 
-p.set_related_accounts(1, %w(2 3 4 5 11243) )
-'''
+    id = 1
+    account = p.find_account_by_id(id)
+    puts account
+
+    p.set_related_accounts(1, %w(2 3 4 5 11243) )
 
 ## What's Next ##
 This gem as it is meets my needs for interacting with Parature.  I am releasing in the hopes that someone else may find it useful.
