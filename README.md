@@ -1,5 +1,5 @@
 # Parature-API #
-This was a gem I wrote to facilitate interaction with the Parature API.
+This was a simple gem I wrote to facilitate interaction with the Parature API.
 
 ## Installation ##
 Clone the source.
@@ -36,5 +36,7 @@ You will need your Parature URL, Dev Token, AccountID, and DeptID
     p.set_related_accounts(1, %w(2 3 4 5 11243) )
 
 ## What's Next ##
-This gem as it is meets my needs for interacting with Parature.  I am releasing in the hopes that someone else may find it useful.
+This gem as it is meets my needs for interacting with Parature.  
+I am releasing in the hopes that someone else may find it useful.
+Use at your own risk.
 
