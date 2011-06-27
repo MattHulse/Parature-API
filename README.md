@@ -2,10 +2,9 @@
 This was a simple gem I wrote to facilitate interaction with the Parature API.
 
 ## Installation ##
-Clone the source.
-rake build
-rake install
-
+Clone the repo and then run the following commands:
+    bundle install  # install dependencies
+    rake install    # build and install the gem
 
 ## Getting Started ##
 You will need your Parature URL, Dev Token, AccountID, and DeptID
